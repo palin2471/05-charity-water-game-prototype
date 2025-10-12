@@ -13,3 +13,167 @@ Secondary Colors:
 - Pink:       #F16061
 
 */
+
+/* Center the whole site vertically and horizontally */
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #8BD1CB 0%, #2E9DF7 100%);
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+/* Center main content */
+h1 {
+    text-align: center;
+    color: #2E9DF7;
+    margin-bottom: 24px;
+    font-size: 2rem;
+    letter-spacing: 2px;
+}
+
+/* Center menu and game info */
+#menu, #gameInfo, #feedback {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+/* Style buttons */
+button {
+    background: #FFC907;
+    color: #2E9DF7;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(46,157,247,0.08);
+    transition: background 0.2s, color 0.2s;
+}
+button:hover {
+    background: #2E9DF7;
+    color: #FFC907;
+}
+
+/* Style game board container */
+#gameBoard {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(46,157,247,0.12);
+    padding: 24px;
+    margin-bottom: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Style pipe grid table */
+#gameBoard table {
+    margin: 0 auto;
+    border-spacing: 0;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(46,157,247,0.12);
+    padding: 0;
+}
+
+/* Pipe tile styles */
+.pipe-tile {
+    font-size: 2.5rem;
+    background: #e0f7fa;
+    border: 1px solid #8BD1CB;
+    border-radius: 0;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    vertical-align: middle;
+    transition: background 0.2s, box-shadow 0.2s;
+    user-select: none;
+    padding: 0;
+    color: #159A48;
+    font-family: 'Courier New', Courier, monospace;
+    line-height: 60px;
+}
+
+/* Start and finish tile styles (set in JS for compatibility) */
+
+/* Feedback message style */
+#feedback {
+    margin-top: 16px;
+    font-size: 1.2rem;
+    color: #388e3c;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Score display style */
+#scoreDisplay {
+    margin-left: 16px;
+    font-weight: bold;
+}
+
+/* Elapsed timer style */
+#elapsedTime {
+    background: #2E9DF7;
+    color: #fff;
+    padding: 6px 16px;
+    border-radius: 8px;
+    font-weight: bold;
+    margin-right: 12px;
+    letter-spacing: 1px;
+}
+
+/* Cans container uses flexbox for layout */
+#cansContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+    margin-top: 24px;
+}
+
+/* Can style */
+.can {
+    font-size: 2rem;
+    padding: 24px;
+    background: #e0f7fa;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    transition: background 0.2s;
+    user-select: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.2rem;
+    }
+    button {
+        font-size: 0.9rem;
+        padding: 8px 12px;
+    }
+    #gameBoard {
+        padding: 8px;
+    }
+    .can {
+        font-size: 1.5rem;
+        padding: 16px;
+    }
+    #cansContainer {
+        gap: 8px;
+    }
+    .pipe-tile {
+        font-size: 1.2rem;
+        width: 36px !important;
+        height: 36px !important;
+        padding: 0;
+    }
+}
