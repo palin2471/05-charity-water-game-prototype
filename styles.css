@@ -29,7 +29,7 @@ body {
 /* Center main content */
 h1 {
     text-align: center;
-    color: #2E9DF7;
+    color: #165486;
     margin-bottom: 24px;
     font-size: 2rem;
     letter-spacing: 2px;
@@ -43,6 +43,15 @@ h1 {
     align-items: center;
     gap: 16px;
     margin-bottom: 16px;
+}
+
+#difficultyMenu {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+#difficultyMenu button {
+  margin-left: 6px;
 }
 
 /* Style buttons */
@@ -61,6 +70,20 @@ button {
 button:hover {
     background: #2E9DF7;
     color: #FFC907;
+}
+
+/* Style the Resources button differently */
+.resourcesBtn {
+    background: #FF902A;
+    color: white;
+    font-weight: bold;
+    padding: 12px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.resourcesBtn:hover {
+    background: #F5402C;
 }
 
 /* Style game board container */

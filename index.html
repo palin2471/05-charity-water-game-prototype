@@ -1,35 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Charity Water Game</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Charity Water Game</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <h1>Welcome to the Charity Water Game Prototype</h1>
-    <!-- Game Menu -->
-    <div id="menu">
-        <button id="startBtn">Start</button>
-        <button id="optionsBtn">Options</button>
-        <button id="resourcesBtn">Resources</button>
-        <button id="exitBtn">Exit</button>
+  <h1>Charity Water Game</h1>
+
+  <!-- Game Menu -->
+  <div id="menu">
+    <button id="startBtn">Start</button>
+    <button id="resourcesBtn" onclick="window.open('https://www.charitywater.org/', '_blank')" class="resourcesBtn">Resources</button>
+    <div id="difficultyMenu">
+      <button id="easyBtn" class="difficultyBtn" data-difficulty="easy">Easy</button>
+      <button id="mediumBtn" class="difficultyBtn" data-difficulty="medium">Medium</button>
+      <button id="hardBtn" class="difficultyBtn" data-difficulty="hard">Hard</button>
     </div>
-    <!-- Game Info -->
-    <div id="gameInfo" style="display:none;">
-        <span id="elapsedTime">Time: 0s</span>
-        <span id="levelDisplay">Level: 1</span>
-        <span id="scoreDisplay">Score: 0</span>
-    </div>
-    <!-- Game Board -->
-    <div id="gameBoard" style="display:none;">
-        <!-- Cans will be added here by JavaScript -->
-        <div id="cansContainer"></div>
-    </div>
-    <!-- Add Check Connection button -->
-    <button id="checkBtn" style="display:none; margin-top: 16px;">Check Connection</button>
-    <!-- Feedback Message -->
-    <div id="feedback" style="display:none;"></div>
-    <script src="script.js"></script>
+  </div>
+
+  <!-- Game Info -->
+  <div id="gameInfo" style="display:none;">
+    <span id="elapsedTime">Time: 0s</span>
+    <span id="levelDisplay">Level: 1</span>
+  </div>
+
+  <!-- Game Board -->
+  <div id="gameBoard" style="display:none;">
+    <div id="cansContainer"></div>
+    <table id="pipeGrid"></table>
+  </div>
+
+  <!-- Check Connection button -->
+  <button id="checkBtn" style="display:none; margin-top: 16px;">Randomize</button>
+
+  <!-- Feedback Message -->
+  <div id="feedback" style="display:none;"></div>
+
+  <script src="script.js"></script>
 </body>
 </html>
